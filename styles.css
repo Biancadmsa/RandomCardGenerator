@@ -1,0 +1,54 @@
+body{
+    display: flex; 
+    justify-content: center;
+    background: green;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+   
+}
+
+.cardHeart{
+    display:inline-block;
+    text-align: center;
+    width: 200px;
+    height: 190px;
+    margin:auto;
+    background-color: white;
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    font-size:50px;
+    font-weight: bold;
+    padding:20px;
+    padding-top: 180px;
+    position: relative;
+ 
+    
+    &:before{
+        content:'\2660';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 60px; 
+       
+    }
+    &:after{
+        content:'\2660';
+        position: absolute;
+        bottom: 15px;;
+        right: 15px;
+        font-size: 60px; 
+        transform: rotateX(180deg);
+
+    }
+
+    
+    &.spade:before,&.spade:after{content:'\2660';}
+    &.club:before,&.club:after{content:'\2663';}
+    &.heart:before,&.heart:after{content:'\2665'; color:red;}
+    &.diamond:before,&.diamond:after{content:'\2666'; color:red;}
+   
+    
+}
+
+
